@@ -45,6 +45,7 @@ while start_t < stop_stop:
       has_irr = measurements[ msm_id ]['irr']
       responded=0
       count=0
+      # last_ips will contain the last-responding IP, if the intended dest didn't respond
       last_ips = Counter()
       asns = {}
       for data in MeasurementFetch.fetch( msm_id, start=start_t , stop=stop_t ):
